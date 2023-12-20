@@ -1,3 +1,5 @@
+[2023 Game Report](https://yuhangtom.github.io/bangumi_yearly_report/konico-2023-game-report.html)
+
 根据Bangumi的时光机数据生成年鉴。
 
 # 用法

@@ -1,8 +1,8 @@
 .vscode
-*report.html
+# *report.html
 go-server/config.txt
 go-server/my.db
 go-server/nohup.out
-*report.md
+# *report.md
 !xiadong1994-2017-anime-report.md
 !xiadong1994-all-anime-report.md

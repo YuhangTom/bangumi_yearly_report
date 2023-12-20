@@ -1,0 +1,3612 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangumi Report for konico</title>
+<style>
+  body {font-family: sans-serif; background: #1c1c1c; color: white; margin: 0;}
+  .main {width: 80%; margin: auto; padding: 0}
+  .main h2 {width: 100%; float: left}
+  body ul {list-style-type: none; padding: 0}
+  body ul li {float: left; width: 12.5%;}
+  body.overview ul li {width: 6.25%;}
+  div.image-wrapper {padding-top: 140%;}
+  div.image-wrapper img {width: 100%; top: 0; height: 100%; position: absolute;}
+  body h1 {text-align: center; margin: 10px 60px;}
+  .type-tag {
+    display: inline-block;
+    margin: 0 2px;
+    padding: 0 0.2rem;
+    font-size: 0.7rem;
+    color: white;
+    background-color: #ff5500;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    opacity: 0.8;
+    vertical-align: top;
+  }
+  .type-anime {background-color: #f5222d;}
+  .type-book {background-color: #fa8c16;}
+  .type-music {background-color: #52c41a;}
+  .type-game {background-color: #1890ff;}
+  .type-real {background-color: #722ed1;}
+  .item-title {
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-width: 72px;
+    z-index: 1;
+    bottom: 0;
+    font-size: 1rem;
+    background: linear-gradient(to top, #000000b8, #0101016e 75%, #ffffff00);
+    color: white;
+    padding-top: 1rem;
+  }
+  .item-title a {
+    color: white;
+    text-decoration: none;
+  }
+  .item-box {position: relative;}
+  .item-box:hover {box-shadow: 0 0 10px 5px #4c4c4c; z-index: 1;}
+  .item-box:hover > .item-title {display: block;}
+  .item-image {position: relative;}
+  .item-month-label {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    font-size: 1.5rem;
+    background: linear-gradient(to bottom, #000000b8, #0101016e 75%, #ffffff00);
+    color: white;
+  }
+  body.overview .item-month-label {font-size: 1rem;}
+  .item-month-label span {font-size: 3rem;}
+  body.overview .item-month-label span {font-size: 2rem;}
+  .star {font-size: 0.7rem;}
+  .config {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    color: darkgray;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .config-menu {display: block; opacity: 0.7;}
+  .config:hover .config-menu {display: none;}
+  .config-content {display: none;}
+  .config:hover .config-content {display: block;}
+  .config-btn {
+    display: block;
+    padding: 1px 3px;
+    margin-bottom: 3px;
+    color: #d8d8d8;
+    text-shadow: 0px 1px 2px #444;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #6e6e6e;
+    background-image: linear-gradient(to bottom, #767677 0%, #747474 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff767677', endColorstr='#ff747474', GradientType=0);
+    -webkit-box-shadow: 0 1px 2px #393939, inset 0 1px 1px #7c7c7c;
+    -moz-box-shadow: 0 1px 2px #393939, inset 0 1px 1px #7c7c7c;
+    box-shadow: 0 1px 2px #393939, inset 0 1px 1px #7c7c7c;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .config-btn.enabled {
+    color: #FFF;
+    background-image: linear-gradient(to bottom, #397de8 0%, #3072dc 100%);
+    background-repeat: repeat-x;
+  }
+  #github-link {bottom: 0; padding: 0.5rem; clear: both; text-align: center;}
+  #github-link img {margin: auto; height: 2rem;}
+  @media (max-width: 1300px) {
+    .main {width: 100%;}
+  }
+  @media (max-width: 800px) {
+    body ul li {width: 33.333333%;}
+    body.overview ul li {width: 10%; min-width: 55px;}
+    div.image-wrapper {height: 0; width: 100%; padding-top: 140%;}
+  }
+  @media (max-width: 575px) {
+    body h1 {margin-left: 0;}
+  }
+</style>
+<body>
+
+<h1>
+  Bangumi Report for konico
+  
+  <span class="type-tag type-game">
+    game
+  </span>
+  
+</h1>
+<div id="config" class="config" data-html2canvas-ignore>
+  <div class="config-menu">
+    <img style="filter: invert(1)" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=" />
+  </div>
+  <div class="config-content">
+    <a id="config-overview" class="config-btn disabled" onclick="toggle()">概览模式</a>
+    <a id="action-shot" class="config-btn" onclick="shot()">截图</a>
+  </div>
+</div>
+
+<div class="main">
+  
+  <h2>2023</h2>
+  
+  <ul>
+  
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>1</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/185181" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3f/98/185181_J11NM.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/185181" target="_blank">死亡搁浅</a><br>
+          <small>
+            2023-01-02&nbsp;
+
+            
+            9&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>2</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/15912" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/06/b8/15912_KMRYF.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/15912" target="_blank">传送门2</a><br>
+          <small>
+            2023-02-12&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/2037" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/23/d2/2037_8V21u.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/2037" target="_blank">求生之路2</a><br>
+          <small>
+            2023-02-17&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>3</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/366390" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/80/1d/366390_k96NH.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/366390" target="_blank">卧龙：苍天陨落</a><br>
+          <small>
+            2023-03-06&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/192811" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/00/11/192811_dh7xV.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/192811" target="_blank">超级鸡马</a><br>
+          <small>
+            2023-03-12&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/299999" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/94/cf/299999_FV9kK.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/299999" target="_blank">Pummel Party</a><br>
+          <small>
+            2023-03-13&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/332175" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3b/a4/332175_H8MTe.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/332175" target="_blank">The Past Within</a><br>
+          <small>
+            2023-03-18&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/410415" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/ae/b7/410415_Hve3h.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/410415" target="_blank">Garden Galaxy</a><br>
+          <small>
+            2023-03-19&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>5</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/24059" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/ae/4a/24059_00e99.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/24059" target="_blank">黑暗之魂</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/341517" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/24/b6/341517_fr0M0.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/341517" target="_blank">FIFA 22</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/407860" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/81/27/407860_rR5Iw.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/407860" target="_blank">时间切片：序章</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/249374" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/68/8b/249374_O5oV5.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/249374" target="_blank">仁王2</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/234116" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/eb/bd/234116_qo7WH.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/234116" target="_blank">生化变种</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/342283" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/6f/2e/342283_CRRZc.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/342283" target="_blank">NBA 2K22</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/305543" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/f5/cf/305543_wArKw.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/305543" target="_blank">刺客信条：英灵殿</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/417623" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/b7/1a/417623_nYUS8.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/417623" target="_blank">完美音浪</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/123497" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/01/91/123497_uZm46.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/123497" target="_blank">消逝的光芒</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/301168" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/67/cc/301168_IAL1T.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/301168" target="_blank">胡闹搬家</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/216861" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/5e/11/216861_9ep2z.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/216861" target="_blank">怪物猎人：世界</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/105699" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/c1/81/105699_xFiyJ.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/105699" target="_blank">血源诅咒</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/338191" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/a2/13/338191_ppB7P.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/338191" target="_blank">代号：探戈</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/230970" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/96/af/230970_b8ySq.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/230970" target="_blank">对马岛之魂</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/401184" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/cc/a7/401184_pD9Gp.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/401184" target="_blank">歧路旅人2</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/88868" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/57/cc/88868_wSSyP.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/88868" target="_blank">女神异闻录5</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/185189" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3a/ce/185189_b3p29.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/185189" target="_blank">战神</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/217121" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/7a/b7/217121_44q81.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/217121" target="_blank">旺达与巨像 重制版</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/195573" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/37/c0/195573_aJut2.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/195573" target="_blank">荒野大镖客：救赎2</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/308541" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/82/34/308541_jXp20.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/308541" target="_blank">漫威蜘蛛侠：迈尔斯·墨拉莱斯</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/387052" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/fe/33/387052_PR0K8.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/387052" target="_blank">最后生还者：第一部 重制版</a><br>
+          <small>
+            2023-05-30&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>6</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/157641" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/70/5a/157641_drG99.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/157641" target="_blank">最后生还者：别走</a><br>
+          <small>
+            2023-06-10&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/200187" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/8f/59/200187_t8u5U.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/200187" target="_blank">最后生还者2</a><br>
+          <small>
+            2023-06-13&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>8</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/210822" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/2b/61/210822_2eZ7i.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/210822" target="_blank">木筏</a><br>
+          <small>
+            2023-08-18&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/451844" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/87/70/451844_0dCn6.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/451844" target="_blank">虚拟桌宠模拟器</a><br>
+          <small>
+            2023-08-29&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>9</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/317730" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e9/24/317730_nBuUO.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/317730" target="_blank">英雄联盟：激斗峡谷</a><br>
+          <small>
+            2023-09-22&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/308536" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/6a/82/308536_ncshC.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/308536" target="_blank">地平线 西之绝境</a><br>
+          <small>
+            2023-09-24&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>10</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/455775" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/1e/45/455775_1vBfE.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/455775" target="_blank">赛博朋克 2077：往日之影</a><br>
+          <small>
+            2023-10-09&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/65759" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/9a/c2/65759_fhutt.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/65759" target="_blank">赛博朋克 2077</a><br>
+          <small>
+            2023-10-10&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/350580" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/07/59/350580_WE07Q.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/350580" target="_blank">怪物猎人崛起： 曙光</a><br>
+          <small>
+            2023-10-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/410410" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/70/50/410410_NmRSQ.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/410410" target="_blank">遗迹2</a><br>
+          <small>
+            2023-10-18&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/425633" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/41/5f/425633_Qi0gw.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/425633" target="_blank">反恐精英2</a><br>
+          <small>
+            2023-10-28&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/397763" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/03/61/397763_huCra.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/397763" target="_blank">总决赛</a><br>
+          <small>
+            2023-10-28&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/248719" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/73/69/248719_KYzy1.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/248719" target="_blank">迷失</a><br>
+          <small>
+            2023-10-29&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>11</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/387218" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/ee/74/387218_ZNGGl.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/387218" target="_blank">COCOON</a><br>
+          <small>
+            2023-11-02&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/431295" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/2b/c1/431295_7CUJr.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/431295" target="_blank">巴别塔圣歌</a><br>
+          <small>
+            2023-11-08&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/293738" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/a2/ff/293738_3YJcC.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/293738" target="_blank">拣爱</a><br>
+          <small>
+            2023-11-08&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/412216" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/8a/66/412216_04B64.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/412216" target="_blank">雨中冒险: 回归</a><br>
+          <small>
+            2023-11-10&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/370160" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/79/ac/370160_kznEI.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/370160" target="_blank">闪避刺客</a><br>
+          <small>
+            2023-11-12&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/4521" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/75/2d/4521_SHIrh.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/4521" target="_blank">冒险岛</a><br>
+          <small>
+            2023-11-13&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/3176" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/59/df/3176_ZotQ3.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/3176" target="_blank">机械迷城</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/101922" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/a1/d1/101922_DZJzr.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/101922" target="_blank">纪念碑谷</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            9&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/216446" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/29/05/216446_7An7a.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/216446" target="_blank">纪念碑谷2</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/233205" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/38/2a/233205_HDUyD.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/233205" target="_blank">音乐世界2</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/43527" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/21/ff/43527_1ouF3.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/43527" target="_blank">水果忍者</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/109378" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/26/7f/109378_aJ5jD.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/109378" target="_blank">命运-冠位指定</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/49574" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/f8/46/49574_4FaoO.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/49574" target="_blank">神庙逃亡</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/69423" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/cb/a7/69423_cxArX.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/69423" target="_blank">瘟疫公司</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/192010" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/c9/f1/192010_5IeAO.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/192010" target="_blank">阴阳师</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/57612" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/84/d7/57612_ndDMw.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/57612" target="_blank">割绳子</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/96136" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/0a/bb/96136_2zD66.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/96136" target="_blank">Flappy Bird</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/10858" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/c0/5c/10858_1Z7ca.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/10858" target="_blank">愤怒的小鸟</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/99998" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e5/70/99998_ptU0e.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/99998" target="_blank">2048</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/230968" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/f2/64/230968_BpMi3.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/230968" target="_blank">旅行青蛙</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/146092" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/56/9b/146092_Sw8Mj.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/146092" target="_blank">精灵宝可梦 GO</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/95353" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/ea/60/95353_anY9C.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/95353" target="_blank">画中世界</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            9&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/10343" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/8a/e7/10343_p3vP3.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/10343" target="_blank">jubeat</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/127501" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/fa/45/127501_Ev9XF.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/127501" target="_blank">猫咪后院</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/172168" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/40/ae/172168_Al7K6.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/172168" target="_blank">崩坏3</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/75460" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/86/b7/75460_24KKD.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/75460" target="_blank">王国保卫战：前线</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/61086" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/fd/c9/61086_vBIoF.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/61086" target="_blank">王国保卫战</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/95525" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/22/07/95525_RHfAN.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/95525" target="_blank">节奏大师</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/124878" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/c9/8b/124878_xWg0w.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/124878" target="_blank">奇迹暖暖</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/65913" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/14/1d/65913_rKOW2.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/65913" target="_blank">地铁跑酷</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/208559" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/56/33/208559_6jzc1.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/208559" target="_blank">碧蓝航线</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/56240" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3e/75/56240_ZcauK.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/56240" target="_blank">鳄鱼小顽皮爱洗澡</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/100663" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/06/e7/100663_kOhC4.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/100663" target="_blank">保卫萝卜1</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/77189" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/da/d7/77189_KxKw4.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/77189" target="_blank">迷失之地</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/228620" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/54/96/228620_WPciC.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/228620" target="_blank">弗洛伦丝</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/284157" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/1a/22/284157_zgv97.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/284157" target="_blank">原神</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/161138" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/13/e3/161138_zJhJ2.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/161138" target="_blank">方块逃脱：锈湖</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/169553" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/6b/86/169553_5xXxH.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/169553" target="_blank">锈湖：旅馆</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/293554" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e7/9a/293554_WpFw8.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/293554" target="_blank">战双帕弥什</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/161139" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/db/2f/161139_X33x6.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/161139" target="_blank">方块逃脱：四季</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/40098" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e9/c4/40098_9n8kd.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/40098" target="_blank">糖果传奇</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/118430" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/b1/03/118430_iwBbI.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/118430" target="_blank">王国保卫战：起源</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/104405" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/15/4f/104405_XpOPk.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/104405" target="_blank">别踩白块儿</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/130240" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e1/cb/130240_bF0tT.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/130240" target="_blank">会说话的汤姆猫</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/205124" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/dd/6c/205124_669zb.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/205124" target="_blank">锈湖：根源</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/269242" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/52/ae/269242_YI3YU.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/269242" target="_blank">荒野乱斗</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/230047" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/4d/f5/230047_4ZeWI.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/230047" target="_blank">月圆之夜</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            8&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/198051" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/41/87/198051_UFJqx.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/198051" target="_blank">旁观者</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/169552" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3e/85/169552_S6lA6.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/169552" target="_blank">方块逃脱：生日</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/255878" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/71/b4/255878_AGdHg.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/255878" target="_blank">方块逃脱：悖论</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/161140" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/24/35/161140_RT53b.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/161140" target="_blank">方块逃脱：哈维的盒子</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/152695" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/fd/03/152695_I6uxE.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/152695" target="_blank">太鼓达人+</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/105876" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/3c/95/105876_Vmfpj.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/105876" target="_blank">神之折纸</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/205292" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/75/e1/205292_r9fL4.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/205292" target="_blank">特工A：伪装游戏</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/204977" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e4/f5/204977_DFaDO.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/204977" target="_blank">王权</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            7&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/231517" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e3/f7/231517_8t9kU.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/231517" target="_blank">和平精英</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/146463" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e7/3e/146463_tniIw.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/146463" target="_blank">方块逃脱：23号案件</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/219268" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e7/89/219268_a5AoE.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/219268" target="_blank">方块逃脱：洞穴</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/230931" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/9d/ba/230931_6m17j.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/230931" target="_blank">锈湖：天堂岛</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/217590" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/b2/5c/217590_MzP8D.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/217590" target="_blank">方块逃脱：剧院</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/29340" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/49/12/29340_i0X8i.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/29340" target="_blank">去月球</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/294629" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/53/70/294629_UvbB6.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/294629" target="_blank">轮回的房间</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/161141" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/6e/86/161141_96x2S.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/161141" target="_blank">方块逃脱：阿尔勒</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/161142" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/0a/2f/161142_LbBh4.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/161142" target="_blank">方块逃脱：磨坊</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/292307" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/e8/72/292307_AYjCJ.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/292307" target="_blank">白门</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/383749" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/f9/cc/383749_F9p6l.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/383749" target="_blank">方块逃脱合集</a><br>
+          <small>
+            2023-11-14&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/465612" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/44/c1/465612_oRDVk.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/465612" target="_blank">遗迹2 - 真皇的苏醒</a><br>
+          <small>
+            2023-11-16&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/210885" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/37/31/210885_mxd1g.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/210885" target="_blank">雨世界</a><br>
+          <small>
+            2023-11-21&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/466365" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/0c/5e/466365_Fl8bl.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/466365" target="_blank">THE CORRIDOR</a><br>
+          <small>
+            2023-11-22&nbsp;
+
+            
+            6&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/268588" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/ce/46/268588_3zChk.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/268588" target="_blank">黑帝斯</a><br>
+          <small>
+            2023-11-22&nbsp;
+
+            
+            3&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/291303" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/45/40/291303_tz0h3.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/291303" target="_blank">Noita</a><br>
+          <small>
+            2023-11-24&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/35871" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/c8/d0/35871_XZZYZ.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/35871" target="_blank">风之旅人</a><br>
+          <small>
+            2023-11-26&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/442842" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/20/d0/442842_4q2gZ.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/442842" target="_blank">莱卡：鲜血铸就</a><br>
+          <small>
+            2023-11-26&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/124765" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/53/3d/124765_h4a3o.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/124765" target="_blank">黑暗之魂2：原罪学者</a><br>
+          <small>
+            2023-11-30&nbsp;
+
+            
+            1&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+        <div class="item-month-label">
+          <span>12</span>月
+        </div>
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/56705" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/b4/79/56705_eFoam.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/56705" target="_blank">侠盗猎车手5</a><br>
+          <small>
+            2023-12-07&nbsp;
+
+            
+            4&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/308561" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/14/de/308561_PH4iA.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/308561" target="_blank">跑车浪漫旅7</a><br>
+          <small>
+            2023-12-15&nbsp;
+
+            
+            5&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+    <li>
+      <div class="item-box">
+        
+
+        <div class="item-image">
+            <a href="https://bgm.tv/subject/309371" target="_blank">
+              <div class="image-wrapper">
+                <img src="https://lain.bgm.tv/pic/cover/l/5e/b6/309371_zThav.jpg">
+              </div>
+
+            </a>
+        </div>
+
+        <div class="item-title">
+          
+          <a href="https://bgm.tv/subject/309371" target="_blank">喵咪斗恶龙 II</a><br>
+          <small>
+            2023-12-17&nbsp;
+
+            
+            2&#x2605;
+            
+            
+          </small>
+        </div>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+<div id="github-link" data-html2canvas-ignore>
+  <a href="https://github.com/Shell32-Natsu/bangumi_yearly_report" target="_blank" title="GitHub">
+    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzOC41NDkgNDM4LjU0OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjU0OSA0MzguNTQ5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzIsMTE0LjU3M2MtMTkuNjA4LTMzLjU5Ni00Ni4yMDUtNjAuMTk0LTc5Ljc5OC03OS44QzI5NS43MzYsMTUuMTY2LDI1OS4wNTcsNS4zNjUsMjE5LjI3MSw1LjM2NSAgIGMtMzkuNzgxLDAtNzYuNDcyLDkuODA0LTExMC4wNjMsMjkuNDA4Yy0zMy41OTYsMTkuNjA1LTYwLjE5Miw0Ni4yMDQtNzkuOCw3OS44QzkuODAzLDE0OC4xNjgsMCwxODQuODU0LDAsMjI0LjYzICAgYzAsNDcuNzgsMTMuOTQsOTAuNzQ1LDQxLjgyNywxMjguOTA2YzI3Ljg4NCwzOC4xNjQsNjMuOTA2LDY0LjU3MiwxMDguMDYzLDc5LjIyN2M1LjE0LDAuOTU0LDguOTQ1LDAuMjgzLDExLjQxOS0xLjk5NiAgIGMyLjQ3NS0yLjI4MiwzLjcxMS01LjE0LDMuNzExLTguNTYyYzAtMC41NzEtMC4wNDktNS43MDgtMC4xNDQtMTUuNDE3Yy0wLjA5OC05LjcwOS0wLjE0NC0xOC4xNzktMC4xNDQtMjUuNDA2bC02LjU2NywxLjEzNiAgIGMtNC4xODcsMC43NjctOS40NjksMS4wOTItMTUuODQ2LDFjLTYuMzc0LTAuMDg5LTEyLjk5MS0wLjc1Ny0xOS44NDItMS45OTljLTYuODU0LTEuMjMxLTEzLjIyOS00LjA4Ni0xOS4xMy04LjU1OSAgIGMtNS44OTgtNC40NzMtMTAuMDg1LTEwLjMyOC0xMi41Ni0xNy41NTZsLTIuODU1LTYuNTdjLTEuOTAzLTQuMzc0LTQuODk5LTkuMjMzLTguOTkyLTE0LjU1OSAgIGMtNC4wOTMtNS4zMzEtOC4yMzItOC45NDUtMTIuNDE5LTEwLjg0OGwtMS45OTktMS40MzFjLTEuMzMyLTAuOTUxLTIuNTY4LTIuMDk4LTMuNzExLTMuNDI5Yy0xLjE0Mi0xLjMzMS0xLjk5Ny0yLjY2My0yLjU2OC0zLjk5NyAgIGMtMC41NzItMS4zMzUtMC4wOTgtMi40MywxLjQyNy0zLjI4OWMxLjUyNS0wLjg1OSw0LjI4MS0xLjI3Niw4LjI4LTEuMjc2bDUuNzA4LDAuODUzYzMuODA3LDAuNzYzLDguNTE2LDMuMDQyLDE0LjEzMyw2Ljg1MSAgIGM1LjYxNCwzLjgwNiwxMC4yMjksOC43NTQsMTMuODQ2LDE0Ljg0MmM0LjM4LDcuODA2LDkuNjU3LDEzLjc1NCwxNS44NDYsMTcuODQ3YzYuMTg0LDQuMDkzLDEyLjQxOSw2LjEzNiwxOC42OTksNi4xMzYgICBjNi4yOCwwLDExLjcwNC0wLjQ3NiwxNi4yNzQtMS40MjNjNC41NjUtMC45NTIsOC44NDgtMi4zODMsMTIuODQ3LTQuMjg1YzEuNzEzLTEyLjc1OCw2LjM3Ny0yMi41NTksMTMuOTg4LTI5LjQxICAgYy0xMC44NDgtMS4xNC0yMC42MDEtMi44NTctMjkuMjY0LTUuMTRjLTguNjU4LTIuMjg2LTE3LjYwNS01Ljk5Ni0yNi44MzUtMTEuMTRjLTkuMjM1LTUuMTM3LTE2Ljg5Ni0xMS41MTYtMjIuOTg1LTE5LjEyNiAgIGMtNi4wOS03LjYxNC0xMS4wODgtMTcuNjEtMTQuOTg3LTI5Ljk3OWMtMy45MDEtMTIuMzc0LTUuODUyLTI2LjY0OC01Ljg1Mi00Mi44MjZjMC0yMy4wMzUsNy41Mi00Mi42MzcsMjIuNTU3LTU4LjgxNyAgIGMtNy4wNDQtMTcuMzE4LTYuMzc5LTM2LjczMiwxLjk5Ny01OC4yNGM1LjUyLTEuNzE1LDEzLjcwNi0wLjQyOCwyNC41NTQsMy44NTNjMTAuODUsNC4yODMsMTguNzk0LDcuOTUyLDIzLjg0LDEwLjk5NCAgIGM1LjA0NiwzLjA0MSw5LjA4OSw1LjYxOCwxMi4xMzUsNy43MDhjMTcuNzA1LTQuOTQ3LDM1Ljk3Ni03LjQyMSw1NC44MTgtNy40MjFzMzcuMTE3LDIuNDc0LDU0LjgyMyw3LjQyMWwxMC44NDktNi44NDkgICBjNy40MTktNC41NywxNi4xOC04Ljc1OCwyNi4yNjItMTIuNTY1YzEwLjA4OC0zLjgwNSwxNy44MDItNC44NTMsMjMuMTM0LTMuMTM4YzguNTYyLDIxLjUwOSw5LjMyNSw0MC45MjIsMi4yNzksNTguMjQgICBjMTUuMDM2LDE2LjE4LDIyLjU1OSwzNS43ODcsMjIuNTU5LDU4LjgxN2MwLDE2LjE3OC0xLjk1OCwzMC40OTctNS44NTMsNDIuOTY2Yy0zLjksMTIuNDcxLTguOTQxLDIyLjQ1Ny0xNS4xMjUsMjkuOTc5ICAgYy02LjE5MSw3LjUyMS0xMy45MDEsMTMuODUtMjMuMTMxLDE4Ljk4NmMtOS4yMzIsNS4xNC0xOC4xODIsOC44NS0yNi44NCwxMS4xMzZjLTguNjYyLDIuMjg2LTE4LjQxNSw0LjAwNC0yOS4yNjMsNS4xNDYgICBjOS44OTQsOC41NjIsMTQuODQyLDIyLjA3NywxNC44NDIsNDAuNTM5djYwLjIzN2MwLDMuNDIyLDEuMTksNi4yNzksMy41NzIsOC41NjJjMi4zNzksMi4yNzksNi4xMzYsMi45NSwxMS4yNzYsMS45OTUgICBjNDQuMTYzLTE0LjY1Myw4MC4xODUtNDEuMDYyLDEwOC4wNjgtNzkuMjI2YzI3Ljg4LTM4LjE2MSw0MS44MjUtODEuMTI2LDQxLjgyNS0xMjguOTA2ICAgQzQzOC41MzYsMTg0Ljg1MSw0MjguNzI4LDE0OC4xNjgsNDA5LjEzMiwxMTQuNTczeiIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+  </a>
+</div>
+
+<div id="shot" data-html2canvas-ignore>
+  <img alt="Close" class="close" onclick="closeShot()"
+       src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xOSA2LjQxTDE3LjU5IDUgMTIgMTAuNTkgNi40MSA1IDUgNi40MSAxMC41OSAxMiA1IDE3LjU5IDYuNDEgMTkgMTIgMTMuNDEgMTcuNTkgMTkgMTkgMTcuNTkgMTMuNDEgMTJ6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=" />
+  <div id="canvas-container"></div>
+</div>
+
+<style type="text/css">
+  #shot {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999998;
+    width: 100%;
+    height: 100%;
+  }
+  #shot img.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  #canvas-container {overflow-y: scroll; max-height: 100%;}
+  #shot canvas {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 99999999;
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+</style>
+
+<script type="text/javascript">
+  function toggle() {
+    var confEl = document.getElementById('config-overview');
+    if (!confEl) {return;}
+    if (confEl.classList.contains('enabled')) {
+      document.body.classList.remove('overview');
+      confEl.classList.remove('enabled');
+      confEl.classList.add('disabled');
+    } else {
+      document.body.classList.add('overview');
+      confEl.classList.add('enabled');
+      confEl.classList.remove('disabled');
+    }
+  }
+</script>
+
+<script type="text/javascript">
+  function shot() {
+    if (document.getElementById('html2canvas')) {
+      startShot();
+    } else {
+      var script = document.createElement('script');
+      script.id = 'html2canvas';
+      script.src = "https://html2canvas.hertzen.com/dist/html2canvas.min.js";
+      script.onload = startShot;
+      document.body.appendChild(script);
+    }
+  }
+  function startShot() {
+    html2canvas(document.body, {
+      'allowTaint': true, 'logging': false, 'backgroundColor': '#1c1c1c'
+    }).then(function(canvas) {
+      document.body.style.overflowY = 'hidden';
+      document.getElementById('shot').style.display = 'block';
+      document.getElementById('canvas-container').appendChild(canvas);
+      setTimeout(function() {
+        canvas.id = 'shot-canvas';
+        canvas.style.opacity = '1';
+        canvas.style.transform = 'scale(0.8)';
+      }, 100)
+    });
+  }
+  function closeShot() {
+    document.body.style.overflowY = '';
+    var canvas = document.getElementById('shot-canvas');
+    canvas.style.opacity = '0';
+    canvas.style.transform = 'scale(0)';
+    setTimeout(function() {
+      canvas.remove();
+      document.getElementById('shot').style.display = 'none';
+    }, 300)
+  }
+</script>
+</body>
+</html>
